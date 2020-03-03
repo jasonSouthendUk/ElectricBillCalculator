@@ -23,35 +23,35 @@ Enter the cost of electric (kWh) average uk price (14)
         var intCostPerKWh = 14
         var intHoursUsedPerDay = 6
         var intPricePerDay = 10
-        txtKWh.setText("$intCostPerKWh")
-        txtDay.setText("$intHoursUsedPerDay")
-        var intcounter = 5;
+        txtKWh.text = "$intCostPerKWh"
+        txtDay.text = "$intHoursUsedPerDay"
+        var intcounter = 5
 
         btnKWhPlus.setOnClickListener {
             if (intCostPerKWh in 6..26) {
                 intCostPerKWh += 1
-                txtKWh.setText("$intCostPerKWh")
+                txtKWh.text = "$intCostPerKWh"
                 clearTextView()
             }
         }
         btnKWhMinus.setOnClickListener {
             if (intCostPerKWh in 7..27) {
                 intCostPerKWh -= 1
-                txtKWh.setText("$intCostPerKWh")
+                txtKWh.text = "$intCostPerKWh"
                 clearTextView()
             }
         }
         btnDayPlus.setOnClickListener {
             if (intHoursUsedPerDay in 0..23) {
                 intHoursUsedPerDay += 1
-                txtDay.setText("$intHoursUsedPerDay")
+                txtDay.text = "$intHoursUsedPerDay"
                 clearTextView()
             }
         }
             btnDayMinus.setOnClickListener {
                 if (intHoursUsedPerDay in 1..24) {
                     intHoursUsedPerDay -= 1
-                    txtDay.setText("$intHoursUsedPerDay")
+                    txtDay.text = "$intHoursUsedPerDay"
                     clearTextView()
                 }
             }
@@ -116,12 +116,12 @@ Enter the cost of electric (kWh) average uk price (14)
                 ) {
                     // displays (arrayAppliance[array_counter]) and the watts used (arrayApplianceWatts[array_counter])
                     // id_kWh_used is the textview that displays arrayApplianceWatts
-                    id_kWh_used.text = ""+arrayApplianceWatts[array_counter]
-                    intcounter = array_counter;
-                    txt_cost_per_day.setText("")
-                    txt_cost_per_week.setText("")
-                    txt_cost_per_mouth.setText("")
-                    txt_cost_per_year.setText("")
+                    id_kWh_used.text = "  " + arrayApplianceWatts[array_counter]
+                    intcounter = array_counter
+                    txt_cost_per_day.text = ""
+                    txt_cost_per_week.text = ""
+                    txt_cost_per_mouth.text = ""
+                    txt_cost_per_year.text = ""
                     // get current spinner Appliance in kWh (int IntElectricUse ) -> (double doubleElectricUsed)
 
                 }
@@ -142,10 +142,10 @@ Enter the cost of electric (kWh) average uk price (14)
                 val finalPricePerYear = ConverToPounds(intPricePerDay * 365)
 
 
-                txt_cost_per_day.setText(finalPricePerDay)
-                txt_cost_per_week.setText(finalPricePerWeek)
-                txt_cost_per_mouth.setText(finalPricePerMonth)
-                txt_cost_per_year.setText(finalPricePerYear)
+                txt_cost_per_day.text = finalPricePerDay
+                txt_cost_per_week.text = finalPricePerWeek
+                txt_cost_per_mouth.text = finalPricePerMonth
+                txt_cost_per_year.text = finalPricePerYear
 
             }
         }
@@ -156,7 +156,7 @@ Enter the cost of electric (kWh) average uk price (14)
     private fun ConverToPounds(intPrice: Int): String {
         var strPrice = ""
         var intPound = 0
-        var intCounter = 0;
+        var intCounter = 0
         var strPence = "09"
         for (x in 1..intPrice) {
             intCounter += 1
@@ -178,9 +178,9 @@ Enter the cost of electric (kWh) average uk price (14)
 
     //clear textViews
     private fun clearTextView() {
-        txt_cost_per_day.setText("")
-        txt_cost_per_week.setText("")
-        txt_cost_per_mouth.setText("")
-        txt_cost_per_year.setText("")
+        txt_cost_per_day.text = ""
+        txt_cost_per_week.text = ""
+        txt_cost_per_mouth.text = ""
+        txt_cost_per_year.text = ""
    }
 }
