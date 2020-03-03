@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">ElectricBillCalculator</string>
+    <string name="str_title">Electricity Bill Calculator</string>
+    <string name="str_appliance">Typical appliance:</string>
+    <string name="str_power_consumption">Power consumption:</string>
+    <string name="str_hours_used_per_day">Hours of use per day:</string>
+    <string name="str_price_per_kwh">Price per kWh:</string>
+    <string name="str_cost_per_day">Electricity cost per day:</string>
+    <string name="str_cost_per_week">Electricity cost per week:</string>
+    <string name="str_cost_per_mouth">Electricity cost per month:</string>
+    <string name="str_cost_per_year">Electricity cost per year:</string>
+    <string name="str_calculate">calculate</string>
+    <string name="str_reset">reset</string>
+    <string name="str_plus">+</string>
+    <string name="str_minus">-</string>
+
+</resources>

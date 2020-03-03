@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- textView items "values ->  styles"-->
+    <!-- text sizes "dimens" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/str_title"
+            android:textSize="@dimen/txt_title"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_appliance" />
+        <Spinner
+            style="@style/textViewRight"
+            android:gravity="left|bottom"
+            android:id="@+id/id_appliance_spinner" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_power_consumption" />
+
+        <TextView
+            android:id="@+id/id_kWh_used"
+            android:gravity="center|left"
+            style="@style/textViewRight" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_hours_used_per_day" />
+            <Button
+                style="@style/btnPlusMinus"
+                android:text="@string/str_plus"
+                android:id="@+id/btnDayPlus"
+
+                />
+            <TextView
+                style="@style/txtNumber"
+                android:id="@+id/txtDay"
+                android:text="1"/>
+
+            <Button
+            style="@style/btnPlusMinus"
+                android:text="@string/str_minus"
+                android:id="@+id/btnDayMinus"
+                />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_price_per_kwh" />
+        <Button
+            style="@style/btnPlusMinus"
+            android:text="@string/str_plus"
+            android:id="@+id/btnKWhPlus"
+            />
+        <TextView
+            style="@style/txtNumber"
+            android:id="@+id/txtKWh"
+            android:text="1"/>
+
+        <Button
+            style="@style/btnPlusMinus"
+            android:text="@string/str_minus"
+            android:id="@+id/btnKWhMinus"
+            />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.8">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0.7"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:layout_height="match_parent"
+            android:layout_width="0dp">
+            <Button
+                android:text="@string/str_calculate"
+                android:textSize="@dimen/txt_large"
+                android:background="@drawable/corners_round"
+                android:textStyle="bold"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/btn_calculate"/>
+    </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_cost_per_day" />
+
+        <TextView
+            android:id="@+id/txt_cost_per_day"
+            style="@style/textViewRight" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:gravity="center|left"
+            android:text="@string/str_cost_per_week" />
+        <TextView style="@style/textViewRight"
+            android:id="@+id/txt_cost_per_week"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+        <TextView
+            style="@style/textViewLeft"
+
+            android:text="@string/str_cost_per_mouth" />
+        <TextView style="@style/textViewRight"
+            android:id="@+id/txt_cost_per_mouth" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/textView_layout">
+
+        <TextView
+            style="@style/textViewLeft"
+            android:text="@string/str_cost_per_year" />
+                <TextView style="@style/textViewRight"
+                    android:id="@+id/txt_cost_per_year"    />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="textViewLeft">
+        <item name="android:textSize">@dimen/txt_large</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">0.8</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+    <!-- same as textViewLeft with marginLeft removed -->
+    <style name="textViewRight">
+        <item name="android:textSize">@dimen/txt_large</item>
+        <item name="android:layout_gravity">center_vertical|left</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">left|center</item>
+
+        <item name="android:layout_weight">0.8</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="textView_layout">
+       <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+        <style name="txtNumber">
+            <item name="android:orientation">horizontal</item>
+            <item name="android:textColor">@color/colorBlack</item>
+            <item name="android:text">@string/str_minus</item>
+            <item name="android:layout_marginTop">4dp</item>
+            <item name="android:background">@color/colorGray</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center</item>
+            <item name="android:layout_width">0dp</item>
+            <item name="android:layout_marginBottom">4dp</item>
+            <item name="android:layout_height">match_parent</item>
+            <item name="android:layout_weight">0.3</item>
+        </style>
+
+
+        <style name="btnPlusMinus">
+            <item name="android:textStyle">bold</item>
+            <item name="android:background">@drawable/corners_round</item>
+            <item name="android:gravity">center</item>
+            <item name="android:layout_margin">4dp</item>
+            <item name="android:layout_gravity">center</item>
+            <item name="android:text">@string/str_plus</item>
+            <item name="android:layout_width">0dp</item>
+            <item name="android:layout_height">match_parent</item>
+            <item name="android:textSize">@dimen/txt_title</item>
+            <item name="android:layout_weight">0.2</item>
+        </style>
+
+    >
+</resources>
+
