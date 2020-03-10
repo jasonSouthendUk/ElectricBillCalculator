@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import jasonedwardes.com.electricbillcalculator.Pounds.Pounds
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -136,10 +137,12 @@ Enter the cost of electric (kWh) average uk price (14)
                     intPricePerDay = 1
                 }
 
-                val finalPricePerDay = ConverToPounds(intPricePerDay)
-                val finalPricePerWeek = ConverToPounds(intPricePerDay * 7)
-                val finalPricePerMonth = ConverToPounds((intPricePerDay * 7) * 52 / 12)
-                val finalPricePerYear = ConverToPounds(intPricePerDay * 365)
+                // Pound package convert int into a string: pounds and pence
+
+                val finalPricePerDay = Pounds(intPricePerDay)
+                val finalPricePerWeek = Pounds(intPricePerDay * 7)
+                val finalPricePerMonth = Pounds((intPricePerDay * 7) * 52 / 12)
+                val finalPricePerYear = Pounds(intPricePerDay * 365)
 
 
                 txt_cost_per_day.text = finalPricePerDay
@@ -150,31 +153,6 @@ Enter the cost of electric (kWh) average uk price (14)
             }
         }
 
-
-
-    // covert a int into a string pounds and pence
-    private fun ConverToPounds(intPrice: Int): String {
-        var strPrice = ""
-        var intPound = 0
-        var intCounter = 0
-        var strPence = "09"
-        for (x in 1..intPrice) {
-            intCounter += 1
-            if (intCounter == 100) {
-                intCounter = 0
-                intPound += 1
-            }
-            var intPence = intPrice - (intPound * 100)
-
-                if (intPence in 1..9) {
-                    strPence = "0$intPence"
-                    strPrice = "£$intPound.$strPence"
-                } else {
-                    strPrice = "£$intPound.$intPence"
-                }
-            }
-            return strPrice
-        }
 
     //clear textViews
     private fun clearTextView() {
